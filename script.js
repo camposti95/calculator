@@ -131,7 +131,6 @@ calculator.sign.addEventListener('click', () => {
 
 calculator.divide.addEventListener('click', () => {
     calculator.chooseOperation("/")
-    calculator.changeBg()
     calculator.updateOutput()
 })
 
