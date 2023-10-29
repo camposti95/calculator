@@ -1,0 +1,109 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+body {
+    background-image: linear-gradient(to top, #407dcc, #210062);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+.container {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 440px;
+    height: 700px;
+    background-color: rgb(13, 114, 145);
+    border-radius: 30px;
+    z-index: 10;
+    box-shadow: 0 0 25px 10px #000000;
+}
+.calc-grid {
+    z-index: 100;
+    position: relative;
+    top: 5%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    place-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px)
+}
+.calc-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    color: white;
+}
+.orange {
+    background-color: rgb(180, 118, 60);
+}
+.orange:hover {
+    background-color: rgb(165, 108, 55);
+    /* background-image: radial-gradient(rgb(145, 95, 48), rgb(116, 75, 38), rgb(83, 53, 27)); */
+    border: 1.5px solid black;
+    text-shadow: 0 0 30px #f7b792, 0 0 10px #f5ceb7;
+}
+.gray {
+    background-color: rgb(44, 77, 114);
+}
+.gray:hover {
+    background-color: rgb(40, 70, 104);
+    /* background-image: radial-gradient(rgb(38, 67, 99), rgb(28, 49, 71), rgb(22, 39, 56)); */
+    border: 1.5px solid black;
+    text-shadow: 0 0 30px #6178ca, 0 0 10px #8c9ace;
+}
+.click {
+    background-image: radial-gradient(rgb(38, 67, 99), rgb(28, 49, 71), rgb(22, 39, 56));
+}
+.bottom-left {
+    border-bottom-left-radius: 10px;
+}
+.bottom-right {
+    border-bottom-right-radius: 10px;
+}
+.span-two {
+    grid-column: span 2;
+}
+.display {
+    grid-column: 1 / -1;
+    background-color: rgb(15, 17, 37);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.prev-operand {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #ffffff, 0 0 3px #f5f7ad;
+}
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 0 30px #ffffff, 0 0 10px #f5f7ad;
+}
+.output {
+    background-color: rgb(15, 17, 37);
+    color: white;
+    text-shadow: 0 0 30px #ffffff, 0 0 10px #f5f7ad;
+    border: none;
+    text-align: end;
+}
